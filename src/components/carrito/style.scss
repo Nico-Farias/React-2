@@ -1,0 +1,59 @@
+.carritoContenedor {
+
+    h2,
+    p {
+        font-weight: bold;
+    }
+
+
+
+    .carritoContenedorInterno {
+        display: grid;
+        grid-template-columns: 15% 60% 15% 10%;
+        background-color: white;
+        text-align: center;
+        align-items: center;
+        margin: 1rem;
+        border-bottom: 1px solid grey;
+        padding-bottom: 1rem;
+
+        img {
+            border: 1px solid black;
+            width: 80px;
+            height: 100px;
+        }
+
+        h2 {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+        .btnAyQ {
+            display: flex;
+            flex-direction: column;
+
+            button {
+                font-size: 2rem;
+                font-weight: bold;
+                background-color: white;
+                border: none;
+            }
+
+            .agregar {
+                color: green;
+                margin-top: 0;
+            }
+
+            .quitar {
+                color: red;
+            }
+
+
+
+        }
+    }
+}

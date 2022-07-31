@@ -1,0 +1,13 @@
+.ContenedorCount {
+    width: 15rem;
+    text-align: center;
+    background-color: gray;
+    font-weight: bold;
+    cursor: pointer;
+
+    .contenedor {
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+
+    }
+}

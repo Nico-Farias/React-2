@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Product from './components/ItemsProducts';
+import Navegacion from './components/nav/index';
+import Carrito from './components/carrito/carrito';
+import CartProvider from './context/cartContext';
+import ItemsCount from './components/itemsCount/ItemsCount';
+
+
+
+
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+    <div className="App">
+
+
+      <CartProvider>
+        <header>
+          <Navegacion />
+          <Carrito />
+        </header>
+
+        <main>
+
+          <Product />
+        </main>
+      </CartProvider>
+
+
+    </div>
+  )
+
+
+}
