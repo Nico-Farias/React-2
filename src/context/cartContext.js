@@ -23,6 +23,8 @@ function CartProvider({ children }) {
 
     //FUNCONES DE CARRITO
 
+    const [count, setCount] = useState(0);
+
     const [cartItem, setCartItems] = useState(() => {
         try {
             const productosEnLocal = localStorage.getItem("cartProducts");
@@ -44,6 +46,10 @@ function CartProvider({ children }) {
     const addItemToCart = (product) => {
         const inCart = cartItem.find((productInCart) => productInCart.id === product.id);
 
+
+
+        setCount(count + 1);
+
         if (inCart) {
             setCartItems(
                 cartItem.map((productInCart) => {
@@ -61,7 +67,7 @@ function CartProvider({ children }) {
     }
     const deleteCarrito = (product) => {
         const inCart = cartItem.find((productInCart) => productInCart.id === product.id);
-
+        setCount(count - 1)
 
         if (inCart.cantidad === 1) {
             setCartItems(
@@ -80,7 +86,7 @@ function CartProvider({ children }) {
 
     }
     return (
-        <CartContext.Provider value={{ data, loading, cartItem, addItemToCart, deleteCarrito }}>
+        <CartContext.Provider value={{ count, setCount, data, loading, cartItem, addItemToCart, deleteCarrito }}>
             {children}
         </CartContext.Provider>
     )

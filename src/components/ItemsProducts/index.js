@@ -10,7 +10,7 @@ export default function Product() {
 
 
 
-    const { addItemToCart, data, loading } = useContext(CartContext)
+    const { addItemToCart, data, loading, count, setCount } = useContext(CartContext)
 
 
 
@@ -33,19 +33,22 @@ export default function Product() {
 
                                 <div className="info">
                                     <p className="priceP">Precio: $ {product.price}</p>
-                                    <p className="stockP">Disponibles {product.stock}</p>
+                                    <p className="stockP">Disponibles {product.stock - count}</p>
                                 </div>
 
 
-                                <button className="btnAgregar" onClick={() => addItemToCart(product)}>Agregar al carrito</button>
+                                <button className="btnAgregar" onClick={() => addItemToCart(product)} disabled={count >= product.stock}>Agregar al carrito</button>
 
                             </div>
                         </div>
+
+
 
                     )}
 
 
         </div>
+
     )
 
 }

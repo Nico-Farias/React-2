@@ -81,7 +81,7 @@ const getData = new Promise((res, rej) => {
             res(ProductsData)
         }, 3000)
     } else {
-        rej(console.log("erro al cargar datos"))
+        rej(console.log("error al cargar datos"))
     }
 })
 

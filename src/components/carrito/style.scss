@@ -5,11 +5,42 @@
         font-weight: bold;
     }
 
+    .total {
+        font-weight: bold;
+        text-transform: uppercase;
 
+        span {
+            color: green;
+        }
+    }
+
+
+    .contenedorPago {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .btnPagar {
+            border-radius: 2rem;
+            border: 2px outset greenyellow;
+            background-color: rgb(90, 196, 90);
+            padding: .3rem 1rem;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btnPagar:hover {
+            background-color: rgb(185, 236, 143);
+            color: rgb(43, 138, 43);
+            transition: 1s;
+        }
+    }
 
     .carritoContenedorInterno {
         display: grid;
-        grid-template-columns: 15% 60% 15% 10%;
+        grid-template-columns: 15% 55% 20% 10%;
         background-color: white;
         text-align: center;
         align-items: center;
@@ -30,6 +61,11 @@
 
         p {
             font-weight: bold;
+        }
+
+        .itemCantidad {
+            display: flex;
+            column-gap: 4rem;
         }
 
         .btnAyQ {

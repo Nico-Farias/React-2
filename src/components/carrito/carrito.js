@@ -56,8 +56,11 @@ function Carrito() {
                         </div>
                     )}
 
-                    <h2 className="total">Total: $ <span>{total}</span>  </h2>
+                    <div className='contenedorPago'>
 
+                        <h2 className="total">Total a pagar  :   <span> $ {total}</span>  </h2>
+                        <button className='btnPagar'>Realizar pago</button>
+                    </div>
                 </div>
             )}
 

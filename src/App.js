@@ -5,7 +5,7 @@ import Product from './components/ItemsProducts';
 import Navegacion from './components/nav/index';
 import Carrito from './components/carrito/carrito';
 import CartProvider from './context/cartContext';
-import ItemsCount from './components/itemsCount/ItemsCount';
+
 
 
 

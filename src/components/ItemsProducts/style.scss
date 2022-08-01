@@ -41,6 +41,14 @@
         color: white;
         background-color: rgb(69, 201, 69);
         font-weight: bold;
+        border: 2px outset rgb(113, 146, 35);
+    }
+
+    .btnAgregar:hover {
+        background-color: rgb(185, 236, 143);
+        color: rgb(43, 138, 43);
+        transition: 1s;
+        border: 2px outset white;
     }
 
 }
